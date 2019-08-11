@@ -1,0 +1,43 @@
+{
+  "name": "rf433-adapter",
+  "display_name": "RF433",
+  "version": "0.1.0",
+  "description": "Connect your 433MHz devices",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "install": "sh build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/rf433-adapter.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/rf433-adapter/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/rf433-adapter#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "lib/index.js",
+    "lib/rf433-adapter.js",
+    "native/sniffer"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.1"
+  }
+}
