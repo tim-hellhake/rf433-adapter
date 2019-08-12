@@ -10,6 +10,8 @@ import { spawn } from 'child_process';
 
 import path from 'path';
 
+const RECEIVED_EVENT = 'received';
+
 class Rf433Device extends Device {
     public readonly trigger: () => void;
 
@@ -19,12 +21,18 @@ class Rf433Device extends Device {
         this['@type'] = ['SmartPlug'];
         this.name = `RF433 (${code})`;
 
-        const receivedEvent = new Event(null, 'received');
-        this.events.set('received', receivedEvent);
+        this.events.set(RECEIVED_EVENT, {
+            name: RECEIVED_EVENT,
+            metadata: {
+                description: 'Code received',
+                type: 'string'
+            }
+        });
 
         this.trigger = () => {
             console.log(`Triggered ${code}`)
-            this.eventNotify(receivedEvent);
+            this.eventNotify(new Event(this, RECEIVED_EVENT, code));
+            console.log("Trigger finished")
         }
     }
 }
@@ -41,6 +49,7 @@ export class Rf433Adapter extends Adapter {
         child.stdout.on('data', (chunk) => {
             const code = chunk.toString().replace('\n', '');
             let device = devices[code];
+            console.log(`Received ${code}`);
 
             if (!device) {
                 console.log(`Discovered new device with code ${code}`);

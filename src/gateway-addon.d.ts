@@ -9,6 +9,16 @@ declare module 'gateway-addon' {
         constructor(device: any, name: string, data?: any);
     }
 
+    interface EventDescription {
+        name: string;
+        metadata: EventMetadata;
+    }
+
+    interface EventMetadata {
+        description: string,
+        type: string
+    }
+
     class Device {
         protected '@context': string;
         protected '@type': string[];
@@ -17,7 +27,7 @@ declare module 'gateway-addon' {
 
         constructor(adapter: Adapter, id: string);
 
-        public events: Map<String, Event>;
+        public events: Map<String, EventDescription>;
         public eventNotify(event: Event): void;
     }
 
