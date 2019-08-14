@@ -6,3 +6,8 @@
 [![license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](LICENSE)
 
 Connect your 433MHz devices.
+
+# How to use
+Currently the adapter is read-only.
+To add a new device trigger a transmission on the device.
+As soon the addon receives the code it will create a new thing.
