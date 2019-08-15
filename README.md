@@ -5,7 +5,11 @@
 [![optionalDependencies](https://david-dm.org/tim-hellhake/rf433-adapter/optional-status.svg)](https://david-dm.org/tim-hellhake/rf433-adapter?type=optional)
 [![license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](LICENSE)
 
-Connect your 433MHz devices.
+This addon allows you to integrate 433 MHz devices into your raspberry pi based gateway.
+
+Simply connect a rf433 receiver to gpio port 2 of your raspberry pi.
+
+See http://wiringpi.com/pins/ for the correct location of the pin.
 
 # How to use
 Currently the adapter is read-only.
