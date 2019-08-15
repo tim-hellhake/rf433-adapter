@@ -1,5 +1,9 @@
 #!/bin/bash
 
+npm install
+npm run build
+rm -rf node_modules
+
 npm install --production
 
 shasum --algorithm 256 package.json lib/*.js native/sniffer LICENSE > SHA256SUMS
