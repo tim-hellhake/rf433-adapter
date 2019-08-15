@@ -1,7 +1,7 @@
 {
   "name": "rf433-adapter",
   "display_name": "RF433",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Connect your 433MHz devices",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
