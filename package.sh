@@ -5,6 +5,7 @@ npm run build
 rm -rf node_modules
 
 npm install --production
+rm -rf node_modules/.bin
 
 shasum --algorithm 256 package.json manifest.json lib/*.js native/sniffer LICENSE README.md > SHA256SUMS
 find node_modules -type f -exec shasum --algorithm 256 {} \; >> SHA256SUMS
