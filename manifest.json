@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "id": "rf433-adapter",
+  "name": "RF433",
+  "short_name": "RF433",
+  "version": "0.1.2",
+  "description": "Connect 433MHz devices to your raspberry pi using a rf433 board",
+  "homepage_url": "https://github.com/tim-hellhake/rf433-adapter#readme",
+  "license": "MPL-2.0",
+  "author": "Tim Hellhake",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "strict_min_version": "0.10.0",
+      "strict_max_version": "*",
+      "primary_type": "adapter"
+    }
+  }
+}

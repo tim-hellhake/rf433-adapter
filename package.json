@@ -23,6 +23,7 @@
   "files": [
     "LICENSE",
     "SHA256SUMS",
+    "manifest.json",
     "lib/index.js",
     "lib/rf433-adapter.js",
     "native/sniffer"
