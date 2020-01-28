@@ -3,7 +3,7 @@
   "id": "rf433-adapter",
   "name": "RF433",
   "short_name": "RF433",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Connect 433MHz devices to your raspberry pi using a rf433 board",
   "homepage_url": "https://github.com/tim-hellhake/rf433-adapter#readme",
   "license": "MPL-2.0",
