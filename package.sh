@@ -1,5 +1,10 @@
 #!/bin/bash -e
 
+# build native dependency
+cd native
+make clean all
+cd ..
+
 npm install
 npm run build
 rm -rf node_modules
