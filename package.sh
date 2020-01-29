@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 # build native dependency
+git submodule update --init
 cd native
 make clean all
 cd ..
