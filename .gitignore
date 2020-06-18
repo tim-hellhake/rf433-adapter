@@ -1,4 +1,6 @@
-node_modules
-lib
 *.o
+*.sha256sum
+*.tgz
+lib
+node_modules
 sniffer
