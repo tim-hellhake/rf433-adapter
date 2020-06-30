@@ -1,13 +1,9 @@
 #!/bin/bash -e
 
-# Load nvm
-if [ -d "${HOME}/.nvm" ]; then
-  export NVM_DIR="${HOME}/.nvm"
-  [ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh"
-fi
-
-umask 0
-which npm && npm config set cache /tmp/.npm
+# Setup environment for building inside Dockerized toolchain
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh"
+[ $(id -u) = 0 ] && umask 0
 
 # build native dependency
 git submodule update --init
